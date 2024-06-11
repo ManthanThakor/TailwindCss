@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+    <title>Cute Anime Girls</title>
+  </head>
+  <body class="dark:bg-black transition-colors">
+    <!-- Navbar -->
+    <nav class="bg-gray-200 dark:bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-xl font-bold dark:text-white">Anime Girls</a>
+        <div
+          class="bg-gray-500 w-20 cursor-pointer rounded-3xl toggler dark:bg-green-500"
+        >
+          <div
+            class="bg-white w-10 h-10 scale-75 rounded-3xl transition-transform dark:bg-black"
+          ></div>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <h1 class="text-center mt-10 text-3xl font-bold dark:text-white">
+      Welcome to Cute Anime Girls Gallery
+    </h1>
+
+    <div
+      class="container mx-auto mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow-xl transition-colors"
+    >
+      <h3 class="text-slate-900 dark:text-white font-medium tracking-tight transition-colors text-center text-2xl">
+        Discover the cutest anime characters!
+      </h3>
+      <p class="text-slate-500 dark:text-slate-400 mt-2 text-center text-sm transition-colors">
+        Enjoy a curated list of the most adorable anime girls. Toggle the dark mode for a different viewing experience.
+      </p>
+    </div>
+
+    <!-- Anime Characters Section -->
+    <div class="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl transition-colors">
+        <img src="https://via.placeholder.com/300" alt="Anime Girl 1" class="rounded-t-xl w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-slate-900 dark:text-white font-medium">Anime Girl 1</h4>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl transition-colors">
+        <img src="https://via.placeholder.com/300" alt="Anime Girl 2" class="rounded-t-xl w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-slate-900 dark:text-white font-medium">Anime Girl 2</h4>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl transition-colors">
+        <img src="https://via.placeholder.com/300" alt="Anime Girl 3" class="rounded-t-xl w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-slate-900 dark:text-white font-medium">Anime Girl 3</h4>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+    <!-- End of Anime Characters Section -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-800 p-4 mt-10 text-center">
+      <p class="text-slate-900 dark:text-slate-400">
+        &copy; 2024 Cute Anime Girls. All rights reserved.
+      </p>
+    </footer>
+    <!-- End of Footer -->
+
+    <script>
+      // Toggle Dark Functionality
+      let flag = true;
+      const toggler = document.querySelector('.toggler');
+
+      // Toggle Dark Function
+      const toggleDark = () => {
+        toggler.addEventListener('click', () => {
+          const html = document.documentElement;
+          toggler.children[0].classList.toggle('translate-x-10');
+          if (flag) {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+          flag = !flag;
+        });
+      };
+      toggleDark();
+    </script>
+  </body>
+</html>
